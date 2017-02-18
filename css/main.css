@@ -1,0 +1,195 @@
+/*
+Tan scheme -- Light to dark
+F3E6DD -- Lightest
+D8C7BE
+A6958C
+726C67
+404142 -- Darkest
+*/
+
+/*@import url(https://fonts.googleapis.com/css?family=Muli:400,300);*/
+/*@import url(https://fonts.googleapis.com/css?family=Oswald:400,700);*/
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,600,500,400,300);
+/*@import url(https://fonts.googleapis.com/css?family=Roboto:900,700,100,300,400,500);*/
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100,300,900,700);
+
+/* CSS CLEAR DEFAULTS */
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video {margin: 0;padding: 0;border: 0;outline: 0;font-size: 100%;vertical-align: baseline;background: transparent;}
+
+html, body {
+    background-color: #191a1a; /*#F3E6DD;*/
+    margin:0;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+body {
+    position: relative;
+    z-index: 0;
+    font-family: Open Sans, sans-serif;
+    font-weight: 300;
+    letter-spacing: 1.2px;
+    overflow-y: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Lato, sans-serif;
+    font-size: 500%;
+    font-weight: 100;
+    margin-top: 0.00em;
+    margin-bottom: 0.67em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 1px dotted inherit;
+}
+
+input {
+    border: 1px solid;
+    font-size: 14px;
+    padding: 5px 5px;
+}
+
+/* All nav bars */
+.section-nav {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#group-page {
+    z-index: 1;
+}
+
+#background-nav {
+    z-index: 2;
+    background-color: #121413;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+}
+
+
+#section-header {
+    z-index: 4;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+
+.user-name, .user-score {
+    cursor: default;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 5vw;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+}
+
+.user-score {
+    top: 3vh;
+    right: 6vw;
+}
+
+.birds-killed-number, .birds-killed-text {
+    top: 3vh;
+    right: 6vw;
+    color: darkgrey;
+}
+
+#section-footer {
+    z-index: 4;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: #ffffff;
+}
+
+#section-footer-links {
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+}
+
+#section-footer-code {
+    margin: 10px;
+    color: #555;
+}
+
+/* Nav bar items */
+#section-header a {
+    text-decoration: none;
+    /*letter-spacing: 1.5px;*/
+    display: block;
+    padding: 1.2em;
+    color: #CCCCCC;
+
+    transition: color 0.2s ease;
+}
+
+#section-footer-links a {
+    text-decoration: none;
+    color: darkgray;
+    font-weight: 300;
+    display: block;
+    padding-right: 2em;
+    padding-left: 2em;
+    border-top: 3em;
+    border-right: 1px solid rgba(255,255,255,0.3);
+}
+
+#section-footer-links li:last-of-type a {
+    border-right: none;
+}
+
+#section-header a:hover {
+    color: darkgray;
+}
+
+#section-footer-links a:hover {
+    color: #A6958C;
+}
+
+
+/* Small Screens */
+@media all and (max-width: 750px) {
+
+
+    #section-header {
+        font-size: 80%;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 300%;
+    }
+
+    #section-footer-links {
+        -webkit-flex-flow: column wrap;
+        flex-flow: column wrap;
+        padding: 0;
+    }
+
+    #section-footer-links a {
+        border-right: none;
+    }
+
+    .section-nav li:last-of-type a {
+        border-bottom: none;
+    }
+}
+
+
+/* dat gui element */
+#gui {
+    position: fixed;
+    top: 82px;
+    right: 0px;
+}
