@@ -11,11 +11,9 @@ function setup() {
 function draw() {
 	setBackground();
 	background(backgroundColor.x,backgroundColor.y,backgroundColor.z);
-//	stroke(50);
 	textAlign(CENTER);
 	textSize(38);
 	fill(25);
-//	noFill();
 	text("Type Something",width/2,height/2);
 	for(var i = 0; i < boxes.length; i++){
 		boxes[i].show();
